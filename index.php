@@ -79,6 +79,10 @@
                             Hotel with Parking
                         </label>
                     </div>
+                    <div>
+                        <label for="howManyStars">How Many Stars</label>
+                        <input type="number" max="5" min="1" id="howManyStars" name="howManyStars" placeholder="1 to 5">
+                    </div>
                     <button type="submit" class="btn btn-primary">Filter List</button>
                 </form>
             </div>
