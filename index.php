@@ -55,7 +55,7 @@
 </head>
 <body>
     <main class="container">
-        <h1 class="mt-3 mb-3">Lista Di Hotel</h1>
+        <h1 class="mt-3 mb-3">List of Hotels</h1>
         <div class="row">
             <div class="col">
                 <form action="" method="GET">
