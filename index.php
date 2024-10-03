@@ -39,8 +39,16 @@
         ],
 
     ];
-
-
+    if (isset($_GET["parkingYes"])){
+        $filteredHotels = [];
+        // vado a filtrare gli hotel con parcheggio
+        foreach ($hotels as $hotel) {
+            if ($hotel["parking"]) {
+                $filteredHotels[] = $hotel; 
+            }
+        }
+        $hotels = $filteredHotels;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,9 +66,9 @@
         <h1 class="mt-3 mb-3">List of Hotels</h1>
         <div class="row">
             <div class="col">
-                <form action="" method="GET">
+                <form action="" method="GET" class="d-flex align-items-center justify-content-around" id="filterForm">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="parkingDoesNoMatter" id="parkingDoesNoMatter" checked>
+                        <input class="form-check-input" type="radio" name="parkingDoesNoMatter" id="parkingDoesNoMatter">
                         <label class="form-check-label" for="parkingDoesNoMatter">
                             No preferences
                         </label>
@@ -71,6 +79,7 @@
                             Hotel with Parking
                         </label>
                     </div>
+                    <button type="submit" class="btn btn-primary">Filter List</button>
                 </form>
             </div>
         </div>
