@@ -40,6 +40,7 @@
 
     ];
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +56,24 @@
 <body>
     <main class="container">
         <h1 class="mt-3 mb-3">Lista Di Hotel</h1>
+        <div class="row">
+            <div class="col">
+                <form action="" method="GET">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="parkingDoesNoMatter" id="parkingDoesNoMatter" checked>
+                        <label class="form-check-label" for="parkingDoesNoMatter">
+                            No preferences
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="parkingYes" id="parkingYes" >
+                        <label class="form-check-label" for="parkingYes">
+                            Hotel with Parking
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
         <table class="table mt-3 table-warning">
             <thead>
                 <tr>
@@ -70,7 +89,8 @@
                     <tr>
                         <td><?=$hotel["name"]?></td>
                         <td><?=$hotel["description"]?></td>
-                        <td><?=$hotel["parking"]?></td>
+                        <?php $answer = $hotel["parking"]? "yes" : "no"; ?>
+                        <td><?=$answer?></td>
                         <td><?=$hotel["vote"]?></td>
                         <td><?=$hotel["distance_to_center"]?></td>
                     </tr>
