@@ -78,6 +78,7 @@
                         <input type="number" max="5" min="1" id="howManyStars" name="howManyStars" placeholder="1 to 5">
                     </div>
                     <button type="submit" class="btn btn-primary">Filter List</button>
+                    <button class="btn btn-warning">Reset Search</button>
                 </form>
             </div>
         </div>
