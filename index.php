@@ -54,16 +54,29 @@
 </head>
 <body>
     <main class="container">
-        <h1>Lista Di Hotel</h1>
-        <?php
-            foreach($hotels as $hotel){
-                echo "Name: ".$hotel["name"]."<br>";
-                echo "Description: ".$hotel["description"]."<br>";
-                echo "Parking: ".$hotel["parking"]."<br>";
-                echo "Vote: ".$hotel["vote"]."<br>";
-                echo "Distance to center: ".$hotel["distance_to_center"]."<br>";
-            }
-        ?>
+        <h1 class="mt-3 mb-3">Lista Di Hotel</h1>
+        <table class="table mt-3 table-warning">
+            <thead>
+                <tr>
+                    <th scope="col">NAME</th>
+                    <th scope="col">DESCRIPTION</th>
+                    <th scope="col">PARKING</th>
+                    <th scope="col">VOTE</th>
+                    <th scope="col">DISTANCE TO CENTER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($hotels as $hotel) {?>
+                    <tr>
+                        <td><?=$hotel["name"]?></td>
+                        <td><?=$hotel["description"]?></td>
+                        <td><?=$hotel["parking"]?></td>
+                        <td><?=$hotel["vote"]?></td>
+                        <td><?=$hotel["distance_to_center"]?></td>
+                    </tr>
+                <?php }?>    
+            </tbody>
+        </table>
     </main>
 </body>
 </html>
