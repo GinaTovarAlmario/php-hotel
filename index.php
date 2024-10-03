@@ -66,13 +66,7 @@
         <h1 class="mt-3 mb-3">List of Hotels</h1>
         <div class="row">
             <div class="col">
-                <form action="" method="GET" class="d-flex align-items-center justify-content-around" id="filterForm">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="parkingDoesNoMatter" id="parkingDoesNoMatter">
-                        <label class="form-check-label" for="parkingDoesNoMatter">
-                            No preferences
-                        </label>
-                    </div>
+                <form action="index.php" method="GET" class="d-flex align-items-center justify-content-around" id="filterForm">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="parkingYes" id="parkingYes" >
                         <label class="form-check-label" for="parkingYes">
